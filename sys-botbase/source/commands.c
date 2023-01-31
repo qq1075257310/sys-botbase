@@ -288,7 +288,7 @@ void peekMulti(u64* offset, u64* size, u64 count)
 }
 
 void readMem(u8* out, u64 offset, u64 size)
-{
+{	printf("1");
 	Result rc = svcReadDebugProcessMemory(out, debughandle, offset, size);
     if (R_FAILED(rc) && debugResultCodes)
         printf("svcReadDebugProcessMemory: %d\n", rc);
